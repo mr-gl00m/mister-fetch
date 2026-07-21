@@ -1,0 +1,27 @@
+{
+  "name": "mister-fetch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Mister Fetch — a local-first search/task engine where every query is a single-shot, scope-locked, memory-ephemeral agent that fetches one answer and then bows out.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace=@mister-fetch/core && npm run build --workspace=@mister-fetch/cli",
+    "check": "npm test && npm run typecheck && npm run build",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspace=@mister-fetch/core && npm run build --workspace=@mister-fetch/core && npm run typecheck --workspace=@mister-fetch/cli",
+    "fetch": "npm run start --workspace=@mister-fetch/cli"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.17",
+    "typescript": "5.6.3",
+    "vitest": "4.1.10"
+  },
+  "overrides": {
+    "ws": "8.21.0"
+  }
+}

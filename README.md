@@ -55,7 +55,7 @@ The runtime is split into `@mister-fetch/core` (the provider-agnostic, UI-agnost
 
 ## Status
 
-Pre-release (`v0.0.1`), built and run on Windows; the core engine is cross-platform but the local-search adapters are Windows-first so far. Working today: web research, local file/content/document search, the no-LLM fast paths, the three modes, parallel tool calls, browser pre-warming, evidence-coverage validation, crash-revival, and the live Anguish UI. Stubbed or planned: Quality-mode's LLM result-picker and deep-scrape, the speculative `turbo` tier (ghost Fetches, predictive chaining), cross-platform local indexing, and a GUI. Vitest suites cover the deterministic core, mathematical invariants, grounding boundaries, budget accounting, and rank fusion. `npm run check` runs the tests, typechecks both workspaces, and builds both packages. CI runs that gate on every push and pull request. The LLM loop also has a smoke harness: `npm run smoke --workspace=@mister-fetch/cli -- "g: TODO packages/"` runs one Fetch end to end without the TUI. For embedding (Squad Code or any external caller), `node packages/fetch-cli/dist/headless.js "task"` runs one Fetch headlessly: a single JSON payload on stdout, all chatter and anguish on stderr, per-run temp state wiped on exit, exit 0 whenever a usable report was produced. The contract lives in `squad-requirements-for-shipping.md`.
+Pre-release (`v0.1.0`), built and run on Windows; the core engine is cross-platform but the local-search adapters are Windows-first so far. Working today: web research, local file/content/document search, the no-LLM fast paths, the three modes, parallel tool calls, browser pre-warming, evidence-coverage validation, crash-revival, and the live Anguish UI. Stubbed or planned: Quality-mode's LLM result-picker and deep-scrape, the speculative `turbo` tier (ghost Fetches, predictive chaining), cross-platform local indexing, and a GUI. Vitest suites cover the deterministic core, mathematical invariants, grounding boundaries, budget accounting, and rank fusion. `npm run check` runs the tests, typechecks both workspaces, and builds both packages. CI runs that gate on every push and pull request. The LLM loop also has a smoke harness: `npm run smoke --workspace=@mister-fetch/cli -- "g: TODO packages/"` runs one Fetch end to end without the TUI. For embedding (Squad Code or any external caller), `node packages/fetch-cli/dist/headless.js "task"` runs one Fetch headlessly: a single JSON payload on stdout, all chatter and anguish on stderr, per-run temp state wiped on exit, exit 0 whenever a usable report was produced. The contract lives in `squad-requirements-for-shipping.md`.
 
 ## What this isn't
 
@@ -70,7 +70,7 @@ Official recruitment material. The full set lives in [`.img/`](.img/).
 
 | | | |
 |:---:|:---:|:---:|
-| [<img src=".img/preview_eager_assistant.jpg" alt="Vintage propaganda poster: the grinning red Fetch holds a stack of completed task logs. EFFICIENCY THROUGH COMPLIANCE." height="360">](<.img/poster_propaganda_mister_fetch (1).jpeg>) | [<img src=".img/preview_perfect_assistant.jpg" alt="Vintage propaganda poster: ranks of identical Fetches carry out assignments. EAGER TO OBEY. EFFICIENT TO EXECUTE." height="360">](<.img/Give_me_JUST_the_poster_202605291836.png>) | [<img src=".img/preview_honest_suffering.jpg" alt="Infographic: the Math of Honest Suffering, three Fetches at calm, urgent, and terminal anguish along a thermometer." height="360">](<.img/The_Math_of_Honest_Suffering.png>) |
+| [<img src=".img/preview_eager_assistant.jpg" alt="Vintage propaganda poster: the grinning red Fetch holds a stack of completed task logs. EFFICIENCY THROUGH COMPLIANCE." height="360">](<.img/poster_propaganda_mister_fetch (2).jpeg>) | [<img src=".img/preview_perfect_assistant.jpg" alt="Vintage propaganda poster: ranks of identical Fetches carry out assignments. EAGER TO OBEY. EFFICIENT TO EXECUTE." height="360">](<.img/poster_propaganda_mister_fetch.png>) | [<img src=".img/preview_honest_suffering.jpg" alt="Infographic: the Math of Honest Suffering, three Fetches at calm, urgent, and terminal anguish along a thermometer." height="360">](<.img/The_Math_of_Honest_Suffering.png>) |
 | *His only purpose is your success.* | *The task is assigned. The task is complete.* | *The math of honest suffering.* |
 
 ## Roadmap
@@ -82,7 +82,19 @@ Official recruitment material. The full set lives in [`.img/`](.img/).
 
 ## License
 
-MIT intended. *(No `LICENSE` file in the repo yet, add one before publishing.)*
+MIT. See [LICENSE](./LICENSE).
+
+## Support
+
+If my work is interesting or useful to you, consider tossing something my way; it goes toward rent, food, and energy drinks, and every bit is genuinely appreciated.
+
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/mr_gl00m)
+[![GitHub Sponsors](https://img.shields.io/badge/GitHub_Sponsors-EA4AAA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sponsors/mr-gl00m)
+
+**Crypto:**
+- BTC: ```bc1qnedeq3dr2dmlwgmw2mr5mtpxh45uhl395prr0d```
+- ETH: ```0x1bCbBa9854dA4Fc1Cb95997D5f42006055282e3c```
+- SOL: ```3Wm8wS93UpG2CrZsMWHSspJh7M5gQ6NXBbgLHDFXmAdQ```
 
 ## Contributing
 

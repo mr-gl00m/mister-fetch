@@ -1,0 +1,31 @@
+{
+  "name": "@mister-fetch/cli",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone TUI for Mister Fetch. Ink grid + Ollama provider.",
+  "type": "module",
+  "bin": {
+    "fetch": "./dist/main.js",
+    "fetch-headless": "./dist/headless.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run --config ../../vitest.config.ts packages/fetch-cli/src",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "start": "node dist/main.js",
+    "dev": "tsc -p tsconfig.json && node dist/main.js",
+    "smoke": "node dist/smoke.js",
+    "headless": "node dist/headless.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.110.0",
+    "@mister-fetch/core": "*",
+    "ink": "5.0.1",
+    "react": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/node": "22.19.17",
+    "typescript": "5.6.3"
+  }
+}
